@@ -9,6 +9,9 @@ The ReportCard class contains a Grade class.  The Grade class
   of these Grades.  Grades can be added, altered or removed.
  */
 public class ReportCard {
+    /*
+    To localize Report Card toString, alter this String:
+     */
     private static final String REPORT_CARD_STRING = "Report Card";
 
     /*
@@ -66,6 +69,11 @@ public class ReportCard {
     a Grade class to hold pairs of Subject-Score.  Ex/ History-82.5
     */
     public static class Grade {
+        /*
+        to localize grade report, change these two strings:
+         */
+        private static final String SUBJECT_STRING = "Subject";
+        private static final String SCORE_STRING = "Score";
 
         private String mSubject;
         private double mScore;
@@ -73,8 +81,8 @@ public class ReportCard {
         @Override
         public String toString() {
             return "{" +
-                    "Subject='" + mSubject + '\'' +
-                    ", Score=" + mScore +
+                    SUBJECT_STRING+"='" + mSubject + '\'' +
+                    ", "+ SCORE_STRING+"=" + mScore +
                     '}';
         }
 
